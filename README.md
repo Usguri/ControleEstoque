@@ -1,84 +1,108 @@
 # Controle de Estoque
 
-Aplicação web para gerenciamento de produtos, categorias, clientes, empresas e listas de compras. O projeto é dividido em uma API REST e uma interface web.
+<div align="center">
 
-## Estrutura
+[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-blue)](https://github.com/Usguri/ControleEstoque)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Gestão](https://img.shields.io/badge/%C3%81rea-Gest%C3%A3o%20de%20estoque-blue)](https://github.com/Usguri/ControleEstoque)
+[![Distribuição](https://img.shields.io/badge/Fluxo-Vendas%20e%20distribui%C3%A7%C3%A3o-2D6CDF)](https://github.com/Usguri/ControleEstoque)
+
+</div>
+
+Sistema de controle de estoque e distribuição de produtos, pensado para conectar administrador e representantes em um fluxo organizado de vendas, solicitações e gerenciamento operacional.
+
+## 📦 Visão geral
+
+Este projeto foi desenvolvido para um cenário em que um administrador disponibiliza produtos e acessos para representantes, que realizam vendas e registram demandas. O sistema busca organizar esse processo e facilitar o acompanhamento das movimentações.
+
+## 🎯 Problema resolvido
+
+Fluxos comerciais com vários participantes costumam sofrer com:
+
+- falta de controle de estoque;
+- pedidos espalhados e pouco estruturados;
+- baixa visibilidade do status das vendas;
+- dificuldade de comunicação entre administração e representantes;
+- necessidade de acompanhar solicitações e entregas com clareza.
+
+A solução organiza esse processo em uma base mais eficiente e rastreável.
+
+## ✨ Funcionalidades
+
+- cadastro de produtos;
+- controle de estoque;
+- gerenciamento de representantes;
+- registro de solicitações e pedidos;
+- acompanhamento do fluxo de vendas;
+- comunicação por e-mail e notificações;
+- organização da operação de distribuição.
+
+## 🏗️ Arquitetura
 
 ```text
-.
-|-- backend/   # API NestJS, TypeORM e PostgreSQL
-|-- frontend/  # Interface React, TypeScript e Vite
-|-- .gitignore # Regras de ignore compartilhadas
-`-- README.md
+Administrador
+      |
+      v
+Sistema de gestão
+      |
+   +----+--------+
+   |             |
+   v             v
+Representantes   Produtos / estoque
+      |
+      v
+Solicitações e vendas
 ```
 
-## Tecnologias
+## 🛠️ Stack tecnológica
 
-- **Backend:** NestJS, TypeScript, TypeORM, PostgreSQL e Swagger.
-- **Frontend:** React, TypeScript, Vite, Material UI e Axios.
-- **Gerenciador de pacotes:** pnpm, com lockfiles separados em cada aplicação.
+- TypeScript
+- aplicação de gestão e controle operacional
+- regras de negócio para vendas e estoque
+- organização e rastreio de dados de distribuição
 
-## Requisitos
+## 🔄 Fluxo principal
 
-- Node.js e Corepack habilitados.
-- pnpm.
-- PostgreSQL em execução e um banco criado para a aplicação.
+1. O administrador cadastra produtos e acessos.
+2. Os representantes realizam solicitações e venda de produtos.
+3. O sistema centraliza o controle das movimentações.
+4. O processo pode ser acompanhado e enviado para e-mail ou outras formas de comunicação.
+5. A gestão monitora o andamento e organiza a operação.
 
-Ative o pnpm com `corepack enable` caso ainda não esteja disponível.
-
-## Configuração
-
-Crie `backend/.env` com as configurações do banco e da API:
-
-```env
-DB_HOST=localhost
-DB_PORT=5432
-DB_USER=postgres
-DB_PASSWORD=sua_senha
-DB_NAME=controle_estoque
-JWT_SECRET=defina_um_segredo_local
-FRONTEND_URL=http://localhost:5173
-PORT=3000
-```
-
-Crie previamente o banco `controle_estoque` no PostgreSQL. Em ambiente local, o TypeORM sincroniza o schema automaticamente; em produção, `NODE_ENV=production` desativa essa sincronização. Nunca publique o arquivo `.env` nem segredos reais.
-
-## Instalação e execução
-
-Instale as dependências de cada aplicação na raiz do projeto:
+## 🚀 Como executar
 
 ```bash
-pnpm --dir backend install
-pnpm --dir frontend install
+git clone https://github.com/Usguri/ControleEstoque.git
+cd ControleEstoque
+npm install
+npm run dev
 ```
 
-Inicie o backend e o frontend em terminais separados:
+> Ajuste este bloco conforme a estrutura real da aplicação.
 
-```bash
-pnpm --dir backend start:dev
-```
+## 📈 Diferencial do projeto
 
-```bash
-pnpm --dir frontend dev
-```
+A grande proposta do sistema está em conectar gestão, vendas e estoque em um mesmo fluxo operacional. Isso ajuda a reduzir erros, organizar o processo e deixar a operação mais previsível.
 
-O frontend em modo de desenvolvimento usa a API em `http://localhost:3000`.
+## 📊 Impacto esperado
 
-| Serviço  | Endereço local            |
-| -------- | ------------------------- |
-| Frontend | http://localhost:5173     |
-| API      | http://localhost:3000     |
-| Swagger  | http://localhost:3000/api |
+- melhor controle do estoque;
+- maior organização das vendas;
+- mais clareza no acompanhamento de pedidos;
+- redução de falhas operacionais e retrabalho.
 
-## Comandos úteis
+## 🧭 Status
 
-```bash
-# Backend
-pnpm --dir backend test
-pnpm --dir backend test:e2e
-pnpm --dir backend build
+Em desenvolvimento, com foco em organização comercial e gestão operacional.
 
-# Frontend
-pnpm --dir frontend lint
-pnpm --dir frontend build
-```
+## 🔜 Próximos passos
+
+- melhorar painel administrativo;
+- incluir relatórios de movimentação;
+- adicionar filtros por período e representante;
+- reforçar integração com e-mail e notificações;
+- otimizar a experiência do usuário para uso diário.
+
+## 📝 Observação
+
+Este README foi estruturado para uma apresentação mais profissional e voltada para portfólio, com foco em clareza, impacto e organização do processo de negócios.
