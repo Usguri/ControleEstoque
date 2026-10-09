@@ -1,0 +1,55 @@
+# Dependencies
+/backend/node_modules/
+/frontend/node_modules/
+/node_modules/
+
+# Build output and coverage
+/backend/dist/
+/backend/coverage/
+/backend/.nyc_output/
+/frontend/dist/
+/frontend/dist-ssr/
+/frontend/coverage/
+/frontend/*.tsbuildinfo
+
+# Uploaded files and generated temporary data
+/backend/uploads/
+/backend/.temp/
+/backend/.tmp/
+/backend/temp-pedido-*.pdf
+/backend/pids/
+
+# Environment files and local overrides
+**/.env
+**/.env.*
+!**/.env.example
+**/*.local
+
+# Logs and diagnostic reports
+**/logs/
+**/*.log
+**/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+**/*.pid
+**/*.pid.lock
+**/*.seed
+
+# Operating systems and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.launch
+*.sublime-workspace
+.project
+.classpath
+.c9/
+.settings/
